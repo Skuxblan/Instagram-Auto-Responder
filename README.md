@@ -5,7 +5,7 @@ Instagram Auto Responder is a tool that automatically responds to direct message
 ## ✨ Features
 
 - 🚀 Auto respond to any direct threads of your Instagram account including spam inbox.
-- 📩 Send custom messages to users.
+- 📩 Send custom text messages to users.
 - 🕒 Adjustable wait time between responses.
 - 📁 Save responded users to avoid sending multiple messages to the same user.
 - 🔒 Creating lock file to prevent multiple usage of single account in the same time.
