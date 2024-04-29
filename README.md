@@ -44,7 +44,7 @@ To use the Instagram Auto Responder, you need to provide your Instagram username
 
 ```
 
-You can modify the `num_replies` field to change the number of replies the auto responder will send before stopping. The `messages` field is a list of messages that the auto responder will choose from when replying to a user. Adjust it as you need.
+You can modify the `num_replies` field to change the number of replies the auto responder will send before stopping. The `messages` field is a list of messages that the auto responder will choose from when replying to a user. Adjust it as you need. By default the tool replies only for unread threads.
 
 
 
@@ -67,6 +67,10 @@ Hello! It's cool you are interested in contributing to this project. You are mor
 ## ⚠️ Disclaimer
 This tool is for educational purposes only. The use of this tool is your responsibility. Please respect the privacy of others and always follow terms of service.
 
+
+## ⭐️ Show your support
+
+Leave a star if that project helped you!
 
 ## 📝 License
 
