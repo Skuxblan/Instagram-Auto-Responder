@@ -12,6 +12,7 @@ def ensure_dir(directory):
         
 ensure_dir('accounts')
 ensure_dir('responded_users')
+ensure_dir('locks')
 
 console_width = os.get_terminal_size().columns
 print('-' * console_width)
@@ -31,6 +32,9 @@ def choose_account():
 
     file_num = int(input("Select account: ")) - 1
     config_file = config_files[file_num]
+    account_name, _ = os.path.splitext(config_file)
+
+    print(f"Selected account: {account_name}")
 
     with open(f'accounts/{config_file}', 'r', encoding='utf-8') as f:
         config = json.load(f)
@@ -59,7 +63,20 @@ config = choose_account()
 if config is None:
     print("Can't load config.")
 else:
-    lock_file = f"{config['account']}.lock"
+
+    while True:
+        continue_choice = input("Do you want to continue? (yes/no): ").lower()
+        if continue_choice in ["yes", "no"]:
+            break
+        else:
+            print("Please enter 'yes' or 'no'.")
+
+    if continue_choice == "no":
+        print("Exiting.")
+        sys.exit()
+
+    lock_file = os.path.join('locks', f"{config['account']}.lock")
+
     if os.path.exists(lock_file):
         print(f"Account {config['account']} is already running. Exiting.")
         sys.exit()
